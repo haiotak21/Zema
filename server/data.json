@@ -135,6 +135,56 @@
       "stageName": "fdsfds ",
       "bio": "dsf",
       "primaryGenre": "Traditional"
+    },
+    {
+      "id": "u-1764946603704",
+      "name": "zema listener",
+      "email": "zema@listener.com",
+      "role": "LISTENER",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=zema@listener.com",
+      "passwordHash": "$2a$10$wqdviYPGN0Re7g46i7pNWOjh9LusTWRjHagOR8.9djwkhPgdXXpy6",
+      "favoriteGenres": [
+        "Traditional",
+        "Afrobeats"
+      ]
+    },
+    {
+      "id": "u-1764946837144",
+      "name": "zema haile",
+      "email": "zemahaile2018@example.com",
+      "role": "LISTENER",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=zemahaile2018@example.com",
+      "passwordHash": "$2a$10$NxXehwr2UHqiJCQF2fHj8uc6wkhHY2FyHEGcaFsCEZG4WCs1xBvr2",
+      "favoriteGenres": [
+        "Afrobeats",
+        "Instrumental"
+      ]
+    },
+    {
+      "id": "u-1764947599280",
+      "name": "sadasd",
+      "email": "asjkkjhj@ksl.sd",
+      "role": "LISTENER",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=asjkkjhj@ksl.sd",
+      "passwordHash": "$2a$10$meJLAUBQfPhtjJQhLNs6EOv5loc3k97fQ33nr5EKOWlkzK4390RRW",
+      "favoriteGenres": [
+        "Traditional",
+        "Ethio-Jazz"
+      ]
+    },
+    {
+      "id": "u-1764947629645",
+      "name": "asda sosoj",
+      "email": "askjklj@lsld.asd",
+      "role": "LISTENER",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=askjklj@lsld.asd",
+      "passwordHash": "$2a$10$YFDeyY1lMvvLDr/QaVXPp.it9UnRujDnieh9NkhhuSMoV/cOw9.7q",
+      "pendingArtist": true,
+      "pendingArtistInfo": {
+        "stageName": "asd sad",
+        "bio": "asd asd",
+        "primaryGenre": "Traditional"
+      }
     }
   ]
 }

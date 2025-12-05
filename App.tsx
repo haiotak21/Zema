@@ -172,6 +172,8 @@ const App: React.FC = () => {
   // Theme & Language Context
   const { theme, toggleTheme } = useTheme();
   const { t, dir, language, setLanguage } = useLanguage();
+  // Welcome message for newly registered users
+  const [welcomeMessage, setWelcomeMessage] = useState<string | null>(null);
 
   // Try to hydrate user from token on mount
   useEffect(() => {
@@ -663,6 +665,30 @@ const App: React.FC = () => {
     } else {
       setCurrentPage("home");
     }
+    // If the registration just occurred, show a welcome message
+    try {
+      const justReg = localStorage.getItem("justRegistered");
+      if (justReg) {
+        const info = JSON.parse(justReg);
+        if (info && info.role) {
+          if (info.role === "ARTIST") {
+            setWelcomeMessage(
+              `Welcome ${
+                info.name || ""
+              }! Your artist application was received and is pending review.`
+            );
+          } else {
+            setWelcomeMessage(
+              `Welcome ${info.name || ""}! Your listener account is ready.`
+            );
+          }
+          setTimeout(() => setWelcomeMessage(null), 6000);
+        }
+        localStorage.removeItem("justRegistered");
+      }
+    } catch (err) {
+      localStorage.removeItem("justRegistered");
+    }
   };
 
   const toggleLanguage = () => {
@@ -769,6 +795,22 @@ const App: React.FC = () => {
       }`}
       dir={dir}
     >
+      {/* Welcome toast for newly registered users */}
+      {welcomeMessage && (
+        <div className="fixed top-16 right-8 z-50 w-full max-w-md">
+          <div className="bg-emerald-600 text-white rounded-lg shadow-lg p-4 border border-emerald-700 flex items-center justify-between">
+            <div className="text-sm font-medium">{welcomeMessage}</div>
+            <div>
+              <button
+                onClick={() => setWelcomeMessage(null)}
+                className="ml-4 px-3 py-1 rounded bg-white/20 hover:bg-white/30"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Mobile Header */}
       <div className="md:hidden fixed top-0 w-full bg-white/90 dark:bg-zinc-950/90 backdrop-blur z-30 p-4 border-b border-zinc-200 dark:border-zinc-800 flex justify-between items-center transition-colors">
         <div className="flex items-center gap-2">

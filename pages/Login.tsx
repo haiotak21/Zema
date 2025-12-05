@@ -23,6 +23,7 @@ export const Login: React.FC<LoginProps> = ({
     email: "",
     password: "",
   });
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,7 +39,10 @@ export const Login: React.FC<LoginProps> = ({
         });
         const data = await res.json();
         if (!res.ok) {
-          alert(data.error || "Login failed");
+          // show inline error modal instead of alert
+          setError(data.error || "Invalid credentials");
+          // auto-dismiss after 5s
+          setTimeout(() => setError(null), 5000);
           return;
         }
         // Persist token then notify app
@@ -46,7 +50,8 @@ export const Login: React.FC<LoginProps> = ({
         onLogin(data.user);
       } catch (err) {
         console.error(err);
-        alert("Network error during login");
+        setError("Network error during login");
+        setTimeout(() => setError(null), 5000);
       }
     })();
   };
@@ -57,6 +62,27 @@ export const Login: React.FC<LoginProps> = ({
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-black p-4 relative overflow-hidden transition-colors duration-300">
+      {/* Inline error modal */}
+      {error && (
+        <div className="fixed left-1/2 transform -translate-x-1/2 top-6 z-50 w-full max-w-md px-4">
+          <div className="bg-zinc-900/95 text-white rounded-lg shadow-lg border border-zinc-800 p-4">
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <p className="font-semibold">{error}</p>
+              </div>
+              <div>
+                <button
+                  onClick={() => setError(null)}
+                  className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-zinc-800/60 hover:bg-zinc-700 text-sm"
+                  aria-label="Dismiss"
+                >
+                  OK
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Top Right Toggles */}
       <div className="absolute top-4 right-4 flex gap-3 z-20">
         <button

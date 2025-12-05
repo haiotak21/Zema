@@ -110,6 +110,19 @@ export const Register: React.FC<RegisterProps> = ({
       } catch (err) {
         // ignore if data.user isn't shaped as expected
       }
+      // Mark that the user just registered so the app can show a welcome toast
+      try {
+        const displayName =
+          role === UserRole.ARTIST
+            ? formData.stageName || formData.name
+            : formData.name;
+        localStorage.setItem(
+          "justRegistered",
+          JSON.stringify({ role: role, name: displayName })
+        );
+      } catch (err) {
+        // ignore
+      }
       onRegister(data.user);
     } catch (err) {
       if (role === UserRole.ARTIST) localStorage.removeItem("requestedRole");
