@@ -642,9 +642,19 @@ const App: React.FC = () => {
     setUser(newUser);
     // If user is an artist or has a pending artist request (or recently requested), send them to the artist view
     const asAny: any = newUser as any;
-    const requestedRole = asAny.requestedRole || localStorage.getItem("requestedRole");
-    console.log("[AuthSuccess] user:", newUser, "requestedRole(local/user):", requestedRole);
-    if (newUser.role === UserRole.ARTIST || asAny.pendingArtist || requestedRole === "ARTIST") {
+    const requestedRole =
+      asAny.requestedRole || localStorage.getItem("requestedRole");
+    console.log(
+      "[AuthSuccess] user:",
+      newUser,
+      "requestedRole(local/user):",
+      requestedRole
+    );
+    if (
+      newUser.role === UserRole.ARTIST ||
+      asAny.pendingArtist ||
+      requestedRole === "ARTIST"
+    ) {
       // clear the temporary requestedRole marker after routing
       localStorage.removeItem("requestedRole");
       setCurrentPage("artist");
@@ -1400,9 +1410,12 @@ const App: React.FC = () => {
               />
             )}
 
-            {currentPage === "artist" && (user.role === UserRole.ARTIST || (user as any).pendingArtist || (user as any).requestedRole === 'ARTIST') && (
-              <ArtistDashboard user={user} />
-            )}
+            {currentPage === "artist" &&
+              (user.role === UserRole.ARTIST ||
+                (user as any).pendingArtist ||
+                (user as any).requestedRole === "ARTIST") && (
+                <ArtistDashboard user={user} />
+              )}
             {currentPage === "admin" && user.role === UserRole.ADMIN && (
               <AdminDashboard />
             )}

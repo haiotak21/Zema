@@ -69,7 +69,8 @@ export const Register: React.FC<RegisterProps> = ({
     e.preventDefault();
     try {
       // mark requested role in localStorage to help route immediately after signup
-      if (role === UserRole.ARTIST) localStorage.setItem("requestedRole", "ARTIST");
+      if (role === UserRole.ARTIST)
+        localStorage.setItem("requestedRole", "ARTIST");
       const payload: any = {
         name: formData.name,
         email: formData.email,
