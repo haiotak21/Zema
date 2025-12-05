@@ -1,0 +1,140 @@
+{
+  "songs": [
+    {
+      "id": "s1",
+      "title": "Guzo",
+      "artist": "Teddy Afro",
+      "coverUrl": "https://picsum.photos/300?random=1",
+      "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "duration": 215
+    },
+    {
+      "id": "s2",
+      "title": "Yene Habesha",
+      "artist": "Aster Aweke",
+      "coverUrl": "https://picsum.photos/300?random=2",
+      "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+      "duration": 189
+    }
+  ],
+  "artists": [
+    {
+      "id": "a1",
+      "name": "Teddy Afro",
+      "image": "https://picsum.photos/100?random=11"
+    },
+    {
+      "id": "a2",
+      "name": "Aster Aweke",
+      "image": "https://picsum.photos/100?random=12"
+    }
+  ],
+  "playlists": [
+    {
+      "id": "p1",
+      "title": "Ethiopian Classics",
+      "coverUrl": "https://picsum.photos/200?random=21",
+      "songs": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "admin-1",
+      "name": "Zema Administrator",
+      "email": "zemasupport@contact.com",
+      "role": "ADMIN",
+      "avatar": "https://picsum.photos/seed/admin/100",
+      "passwordHash": "$2a$10$xjlxo0hwk1MMKuncXevRb.VFGblMC0B1RFnVvJCBX8EQGNKiI6/B."
+    },
+    {
+      "id": "u-1764937187262",
+      "name": "E2ETest User",
+      "email": "e2e-test@example.com",
+      "role": "ARTIST",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=e2e-test@example.com",
+      "passwordHash": "$2a$10$5NShR5S8PfZAKhSOP1H4r.cSvViHsYNeIlckcxjzjEYMVoSISHm/m"
+    },
+    {
+      "id": "u-1764938346452",
+      "name": "haile takele",
+      "email": "hailezema@user.com",
+      "role": "LISTENER",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=hailezema@user.com",
+      "passwordHash": "$2a$10$cSb57gFvTZWRXe8wOyzFXOMIO.Mx74DU9k008V4MwRcDUW5JJRSsy",
+      "favoriteGenres": [
+        "Traditional",
+        "Ethio-Jazz",
+        "Tizita"
+      ]
+    },
+    {
+      "id": "u-1764938449313",
+      "name": "jgjhjjhjhj",
+      "email": "zemasupport1221@contact.com",
+      "role": "LISTENER",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=zemasupport1221@contact.com",
+      "passwordHash": "$2a$10$dID074y8Pyj3P0XGYtKDt.T2/kKkJj/PrQldkRw8WBCOyFl1l7rCe",
+      "favoriteGenres": [
+        "Reggae"
+      ]
+    },
+    {
+      "id": "u-1764943687258",
+      "name": "haile artist",
+      "email": "haileartist@contact.com",
+      "role": "LISTENER",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=haileartist@contact.com",
+      "passwordHash": "$2a$10$P3tmmvtx6E5abfu2ALlkLuPTiFo4a61zsef2q9UV14pWJiVM1FLZ6",
+      "stageName": "artist haiox",
+      "bio": "this is me as i professionals singer",
+      "primaryGenre": "Ethio-Jazz"
+    },
+    {
+      "id": "u-1764943909705",
+      "name": "haile takele",
+      "email": "zemasupport@artist.com",
+      "role": "ARTIST",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=zemasupport@artist.com",
+      "passwordHash": "$2a$10$uB9hGjzrRfmiDevivfXNt.IVICr4SxOFVAWNjsi6b6hEvBaFjFYwC",
+      "stageName": "artist haiox",
+      "bio": "this is me",
+      "primaryGenre": "Traditional"
+    },
+    {
+      "id": "u-1764944331846",
+      "name": "ksjakjdk",
+      "email": "zemasupportds@artist.com",
+      "role": "LISTENER",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=zemasupportds@artist.com",
+      "passwordHash": "$2a$10$CdL/KHUwcS4SGf7Ng8DPku3z3X2TmgyeRk29dQDK3CWV2UarMSFIq",
+      "stageName": "alll asld",
+      "bio": "sds",
+      "primaryGenre": "Traditional"
+    },
+    {
+      "id": "u-1764944475772",
+      "name": "sa sdsa",
+      "email": "zemasupport21312sa@artist.com",
+      "role": "LISTENER",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=zemasupport21312sa@artist.com",
+      "passwordHash": "$2a$10$SdC1.Y2d1lx/mRjmNVlpAeEdU6nK.Gu01yag0YMmRighXC1bvuL9u",
+      "stageName": "a sadsa",
+      "bio": "sdsa",
+      "primaryGenre": "Traditional"
+    },
+    {
+      "id": "u-1764944844463",
+      "name": "asda asda",
+      "email": "sdsasd@artist.com",
+      "role": "LISTENER",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=sdsasd@artist.com",
+      "passwordHash": "$2a$10$vCgOqFs5pbsPt7xt1Beqmu7.B/WLEznJ3jpaSGcXZRT5vJmCRS7OW",
+      "stageName": "fdsfds ",
+      "bio": "dsf",
+      "primaryGenre": "Traditional"
+    }
+  ]
+}
